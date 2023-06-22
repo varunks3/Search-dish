@@ -18,8 +18,3 @@ def search_dishes(request):
 
 
 
-def index(request):
-    dishes = Dish.objects.all()
-    return render(request, 'index.html', {'dishes': dishes})
-
-

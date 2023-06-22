@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Search</title>
 </head>
 <body>
 
-<h1>Search Results</h1>
+<h1>Search Dishes</h1>
 <form method="GET" action="{% url 'search_dishes' %}">
     <input type="text" name="query" value="{{ form.query.value }}" placeholder="Search for dishes">
     <button type="submit">Search</button>
@@ -17,7 +17,6 @@
     <ul>
         {% for dish in dishes %}
             <li>{{ dish.name }}</li>
-
         {% endfor %}
     </ul>
 {% else %}

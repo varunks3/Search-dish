@@ -7,3 +7,5 @@ class Dish(models.Model):
     items = models.JSONField()
     lat_long = models.CharField(max_length=255)
     full_details = models.JSONField()
+    def __str__(self):
+        return self.name
