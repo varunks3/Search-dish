@@ -6,13 +6,11 @@ class Command(BaseCommand):
     help = 'Import data from CSV file'
 
     def handle(self, *args, **options):
-        file_path = './restaurants_small.csv'  # Update with the actual path to your CSV file
+        file_path = './restaurants_small.csv' 
 
-        # Open the CSV file and read the data
         with open(file_path, 'r') as csv_file:
             reader = csv.DictReader(csv_file)
             for row in reader:
-                # Create a Dish object and populate its fields from the CSV row
                 dish = Dish(
                     id=row['id'],
                     name=row['name'],
